@@ -46,7 +46,7 @@ namespace Anagrafica
                         cbx_r3.Content = "inter";
                         preferito = "calcio";
                         if (cbx_r1.IsChecked == true)
-                            preferenza2=$"{cbx_r1.Content}";
+                            preferenza2 = $"{cbx_r1.Content}";
                         else if (cbx_rb2.IsChecked == true)
                             preferenza2 = $"{cbx_rb2.Content}";
                         else
@@ -81,17 +81,18 @@ namespace Anagrafica
                             preferenza2 = $"{cbx_r3.Content}";
                     }
                     MessageBox.Show($"l'utente {nome} {cognome} di età {eta}\nha come sport preferito {preferito} e come seconda preferenza {preferenza2}"
-                        ,"RIEPILOGO",MessageBoxButton.OK);
-                        
+                        , "RIEPILOGO", MessageBoxButton.OK);
 
-                }catch(Exception ex)
+
+                }
+                catch (Exception ex)
                 {
                     MessageBox.Show(ex.Message);
                 }
             }
             else
             {
-                MessageBox.Show("ATTENZIONE NON TUTTI I DATI RICHIESTI SONO STATI INSERITI", "attenzione", MessageBoxButton.OK, MessageBoxImage.Warning);  
+                MessageBox.Show("ATTENZIONE NON TUTTI I DATI RICHIESTI SONO STATI INSERITI", "attenzione", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
         }
     }
