@@ -40,10 +40,6 @@ namespace Anagrafica
                         MessageBox.Show("inserire un eta pari o superiore hai venti", "attenzione", MessageBoxButton.OK, MessageBoxImage.Warning);
                     if (rdb_calcio.IsChecked == true)
                     {
-                        Lbl_domanda.Content = "quale è la tua squadra preferita";
-                        cbx_r1.Content = "juve";
-                        cbx_rb2.Content = "milan";
-                        cbx_r3.Content = "inter";
                         preferito = "calcio";
                         if (cbx_r1.IsChecked == true)
                             preferenza2 = $"{cbx_r1.Content}";
@@ -54,10 +50,6 @@ namespace Anagrafica
                     }
                     else if (rdb_nuoto.IsChecked == true)
                     {
-                        Lbl_domanda.Content = "quale è il tuo stile preferito";
-                        cbx_r1.Content = "rana";
-                        cbx_rb2.Content = "dorso";
-                        cbx_r3.Content = "delfino";
                         preferito = "nuoto";
                         if (cbx_r1.IsChecked == true)
                             preferenza2 = $"{cbx_r1.Content}";
@@ -68,10 +60,6 @@ namespace Anagrafica
                     }
                     else
                     {
-                        Lbl_domanda.Content = "quale è il tuo pallavolista preferito";
-                        cbx_r1.Content = "tommaso";
-                        cbx_rb2.Content = "luca";
-                        cbx_r3.Content = "Miglio";
                         preferito = "pallavolo";
                         if (cbx_r1.IsChecked == true)
                             preferenza2 = $"{cbx_r1.Content}";
@@ -94,6 +82,31 @@ namespace Anagrafica
             {
                 MessageBox.Show("ATTENZIONE NON TUTTI I DATI RICHIESTI SONO STATI INSERITI", "attenzione", MessageBoxButton.OK, MessageBoxImage.Warning);
             }
+        }
+
+        private void rdb_calcio_Checked(object sender, RoutedEventArgs e)
+        {
+            Lbl_domanda.Content = "quale è la tua squadra preferita";
+            cbx_r1.Content = "juve";
+            cbx_rb2.Content = "milan";
+            cbx_r3.Content = "inter";
+        }
+
+        private void rdb_pallavolo_Checked(object sender, RoutedEventArgs e)
+        {
+            Lbl_domanda.Content = "quale è il tuo stile preferito";
+            cbx_r1.Content = "rana";
+            cbx_rb2.Content = "dorso";
+            cbx_r3.Content = "delfino";
+        }
+
+        private void rdb_nuoto_Checked(object sender, RoutedEventArgs e)
+        {
+            Lbl_domanda.Content = "quale è il tuo pallavolista preferito";
+            cbx_r1.Content = "tommaso";
+            cbx_rb2.Content = "luca";
+            cbx_r3.Content = "Miglio";
+            
         }
     }
 }
